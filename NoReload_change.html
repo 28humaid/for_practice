@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>just for practice</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .navbar{
+            background-color: red;
+            display: flex;
+            justify-content: center;
+        }
+        button{
+            background-color: yellow;
+            margin: 1%;
+            padding: 0.5%;
+        }
+        #div1{
+            background-color:turquoise;
+            padding:5%;
+        }
+        #div2{
+            background-color:yellowgreen;
+            padding:5%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <button id="button1" onclick="showDiv('div1')">button1</button>
+        <span></span>
+        <button id="button2" onclick="showDiv('div2')">button2</button>
+    </nav>
+    <div id="div1" class="content-div">
+        Now you see me 1
+    </div>
+    <div id="div2" class="content-div">
+        Now you see me 2
+    </div>
+
+
+    <!-- JAvascript -->
+    
+    <script>
+        // ek function bna lo show div krke...ek div ko chhod k sbko chupa dega ye
+        function showDiv(divId){
+            let divsToHide = document.querySelectorAll('.content-div');
+            divsToHide.forEach(
+                function(div){
+                    div.style.display = 'none';
+                }
+            );
+            document.getElementById(divId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
